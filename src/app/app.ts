@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { OlympicService } from './Services/olympic.service';
+import { OlympicService } from './core/Services/olympic.service';
 import { CommonModule } from '@angular/common';
 import { take } from 'rxjs';
 import { NgxChartsModule } from '@swimlane/ngx-charts';

@@ -1,10 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { map, Observable, Subject, takeUntil } from 'rxjs';
-import { Olympic } from '../../Models/Olympic';
-import { OlympicService } from '../../Services/olympic.service';
+import { map, Observable, Subject } from 'rxjs';
+import { Olympic } from '../../core/Models/Olympic';
+import { OlympicService } from '../../core/Services/olympic.service';
 import { Router } from '@angular/router';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { PieChartData } from '../../Models/PieChartData';
+import { PieChartData } from '../../core/Models/PieChartData';
 import { CommonModule } from '@angular/common';
 
 
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   isDoughnut: boolean = false;
   width: number = Math.min(Math.max(window.innerWidth * 0.6, 300), 900);
   height: number = Math.max(Math.floor(window.innerHeight * 0.6), 400);
-;
+
 
   constructor(private olympicService: OlympicService,
     private router: Router,
@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.router.navigateByUrl(`detail/${(event.name)}`);
   }
 
-
+ 
   private getPieChartData(olympics$: Observable<Olympic[]>): Observable<PieChartData[]> {
     return olympics$.pipe(
       map(countries =>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OlympicService } from '../../Services/olympic.service';
+import { OlympicService } from '../../core/Services/olympic.service';
 
 @Component({
   selector: 'app-not-found',

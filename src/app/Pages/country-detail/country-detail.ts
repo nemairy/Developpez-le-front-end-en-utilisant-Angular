@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Olympic } from '../../Models/Olympic';
-import { OlympicService } from '../../Services/olympic.service';
+import { Olympic } from '../../core/Models/Olympic';
+import { OlympicService } from '../../core/Services/olympic.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
-import { ToLineChartService } from '../../Services/ToLineChart.service';
-import { LineChartData } from '../../Models/LineChartData';
+import { ToLineChartService } from '../..//core/Services/ToLineChart.service';
+import { LineChartData } from '../../core/Models/LineChartData';
 import { Subject, takeUntil } from 'rxjs';
 
 
