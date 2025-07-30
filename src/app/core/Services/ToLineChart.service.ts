@@ -6,10 +6,6 @@ import { Olympic } from "../Models/Olympic";
 /**
  * Service to transform Olympic data into a format suitable for line chart visualization.
  *
- * @remarks
- * This service provides a method to convert an `Olympic` object into a `LineChartData` object,
- * which can be used by charting libraries to render line charts.
- *
  * @method toLineChartData
  * Converts an `Olympic` object into a `LineChartData` object.
  *

@@ -4,7 +4,7 @@ import { Olympic } from '../../core/Models/Olympic';
 import { OlympicService } from '../../core/Services/olympic.service';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { CommonModule } from '@angular/common';
-import { ToLineChartService } from '../..//core/Services/ToLineChart.service';
+import { ToLineChartService } from '../../core/Services/ToLineChart.service';
 import { LineChartData } from '../../core/Models/LineChartData';
 import { Subject, takeUntil } from 'rxjs';
 

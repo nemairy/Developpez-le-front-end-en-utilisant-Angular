@@ -24,7 +24,8 @@ export class OlympicService {
   constructor(private http: HttpClient,
     private router: Router
   ) { }
-
+  
+  
   loadInitialData(): Observable<Olympic[]> {
     return this.http.get<Olympic[]>(this.olympicDataUrl)
       .pipe(
@@ -36,7 +37,10 @@ export class OlympicService {
       );
 
   }
-
+  /**
+   * Retrieves the Olympic data as an observable.
+   * @returns An observable of Olympic data.
+   */
   getOlympics(): Observable<Olympic[]> {
     return this.olympicsSubject.asObservable();
   }
@@ -49,7 +53,10 @@ export class OlympicService {
 
     return participations.reduce((total, participation) => total + Number(participation[count]), 0);
   }
-
+  
+  /**
+   * Navigates back to the home page.
+   */
   backToHome() {
     this.router.navigate(['/']);
   }
